@@ -48,6 +48,6 @@
     </center>
 
     <bottom>
-        <Label text="Autor: Jan Kowalski" alignment="CENTER" maxWidth="Infinity" BorderPane.alignment="CENTER"/>
+        <Label text="Autor: Krzysztof Piechota" alignment="CENTER" maxWidth="Infinity" BorderPane.alignment="CENTER"/>
     </bottom>
 </BorderPane>
