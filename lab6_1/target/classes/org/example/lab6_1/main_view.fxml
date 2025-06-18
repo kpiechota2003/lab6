@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.lab6_1.controller.MainController">
+    <top>
+        <VBox alignment="CENTER">
+            <ImageView fx:id="logoImageView" fitHeight="80" fitWidth="80" />
+            <Label text="Image Editor - Politechnika Wrocławska" styleClass="header" />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+            </padding>
+
+            <Label text="Witaj w aplikacji do przetwarzania obrazów!" />
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Wczytaj Obraz" onAction="#handleLoadImage"/>
+                <ComboBox fx:id="operationComboBox" promptText="Wybierz operację" />
+                <Button fx:id="executeButton" text="Wykonaj" onAction="#handleExecuteOperation" disable="true"/>
+                <Button fx:id="saveButton" text="Zapisz" onAction="#handleSaveImage" disable="true"/>
+                <Button text="Skaluj Obraz" onAction="#handleOpenScaleDialog"/>
+                <Button fx:id="resetButton" text="Resetuj obraz" onAction="#handleResetImage"/>
+                <Button text="Progowanie" onAction="#handleOpenThresholdDialog" />
+                <Button text="⟲" onAction="#handleRotateLeft" />
+                <Button text="⟳" onAction="#handleRotateRight" />
+
+            </HBox>
+
+
+            <HBox spacing="10" alignment="CENTER">
+                <VBox>
+                    <Label text="Obraz oryginalny:"/>
+                    <ImageView fx:id="originalImageView" fitHeight="200" fitWidth="300" preserveRatio="true"/>
+                </VBox>
+                <VBox>
+                    <Label text="Obraz po operacji:"/>
+                    <ImageView fx:id="processedImageView" fitHeight="200" fitWidth="300" preserveRatio="true"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Label text="Autor: Jan Kowalski" alignment="CENTER" maxWidth="Infinity" BorderPane.alignment="CENTER"/>
+    </bottom>
+</BorderPane>
